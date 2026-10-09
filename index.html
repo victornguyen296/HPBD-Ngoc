@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Birthday 💗</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;600;800&family=Dancing+Script:wght@600&family=Pixelify+Sans:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{--crim:#a4162e;--dark:#2a0a14;--pink:#ffc9de}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{min-height:100dvh;display:flex;font-family:'Be Vietnam Pro',system-ui,sans-serif;color:var(--dark);background:
+radial-gradient(circle at 12% 18%,#ff9fc3 0 70px,transparent 71px),radial-gradient(circle at 90% 30%,#ffa9c9 0 90px,transparent 91px),radial-gradient(circle at 20% 88%,#ffa0c2 0 100px,transparent 101px),radial-gradient(circle at 85% 90%,#ff9cc0 0 60px,transparent 61px),var(--pink)}
+body.plaid{background:repeating-linear-gradient(90deg,transparent 0 56px,rgba(196,56,88,.3) 56px 100px),repeating-linear-gradient(0deg,transparent 0 64px,rgba(196,56,88,.3) 64px 104px),#f6cfd6}
+[hidden]{display:none!important}
+main{margin:auto;width:min(560px,100%);position:relative;z-index:1}
+.scr{text-align:center;padding:56px 16px 28px}
+h1{font:700 clamp(34px,9vw,52px)/1.1 'Pixelify Sans',monospace;color:var(--crim);margin:0;text-shadow:2px 2px 0 rgba(255,255,255,.7)}
+.sub{margin:.3em 0 1em;font-size:15px}
+.sub span,.hint span,.cap span{display:block;font-size:13px;opacity:.75}
+.hint,.cap{font-size:14px;margin:.8em 0}
+button{font:inherit;cursor:pointer;color:inherit;border:0;background:none}
+button:focus-visible{outline:3px solid var(--crim);outline-offset:2px}
+.deco i{position:fixed;font-style:normal;color:#ff7fab;opacity:.65;font-size:26px;animation:drift 4s ease-in-out infinite alternate;z-index:0}
+@keyframes drift{to{transform:translateY(-14px) rotate(12deg)}}
+/* gate */
+.boxes{display:flex;gap:10px;justify-content:center;margin:12px 0}
+.boxes b{width:54px;height:58px;display:grid;place-items:center;background:#fff;border:3px solid var(--dark);border-radius:10px;font:700 30px 'Pixelify Sans',monospace;color:var(--crim)}
+.boxes b.h{color:#f08bb0;font-size:28px}
+.pad{display:grid;grid-template-columns:repeat(3,64px);gap:10px;justify-content:center;background:#fff;border:4px solid var(--dark);border-radius:30px;padding:18px;width:fit-content;margin:12px auto}
+.pad button{height:54px;border-radius:10px;background:#d9566f;border:2px solid #8e1630;color:#fff;font-weight:800;font-size:18px;box-shadow:0 3px 0 #8e1630}
+.pad button:active{transform:translateY(2px);box-shadow:none}
+.shake{animation:shake .4s}
+@keyframes shake{25%{transform:translateX(-8px)}75%{transform:translateX(8px)}}
+#err{min-height:1.4em;color:var(--crim);font-weight:600;font-size:14px}
+/* gifts */
+.gifts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:20px}
+.gift{position:relative;aspect-ratio:1;border:3px solid #9c1a35;border-radius:14px;background:rgba(240,100,140,.35);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;transition:transform .2s}
+.gift:hover{transform:translateY(-5px) rotate(-2deg)}
+.gift b{font-size:clamp(40px,12vw,64px);line-height:1;font-weight:400}
+.gift span{font-weight:800;font-size:13px}.gift small{display:block;font-weight:400;opacity:.8}
+.gift.done::after{content:'✓';position:absolute;top:6px;right:8px;color:var(--crim);font-weight:800}
+/* flowers */
+#bq{width:min(340px,84vw);height:auto;overflow:visible}
+.rose{transform-box:fill-box;transform-origin:center;animation:pop .5s backwards;animation-delay:calc(var(--i)*.05s)}
+@keyframes pop{from{transform:scale(0)}}
+.tags{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-top:8px}
+.tags b{background:#fff;border:2px solid var(--dark);border-radius:10px;box-shadow:4px 4px 0 #e784a4;font-weight:800;font-size:14px;letter-spacing:.06em;padding:.7em 1em;animation:pop .5s backwards,drift 3s ease-in-out infinite alternate;animation-delay:calc(1s + var(--i)*.25s),calc(1.6s + var(--i)*.3s)}
+/* mail */
+.env2{position:relative;width:min(340px,86vw);aspect-ratio:1.4;margin:18px auto;background:#d98a9b;border-radius:6px;box-shadow:0 14px 30px rgba(120,20,50,.35);cursor:pointer}
+.env2 i{position:absolute;inset:0;border-radius:6px}
+.bt{background:#c2687a;clip-path:polygon(0 100%,50% 48%,100% 100%)}
+.lf{background:#cf7d8e;clip-path:polygon(0 0,50% 52%,0 100%)}
+.rt{background:#cf7d8e;clip-path:polygon(100% 0,50% 52%,100% 100%)}
+.fl{background:#bd5f73;clip-path:polygon(0 0,100% 0,50% 58%);transform-origin:top;transition:transform .6s}
+.env2.open .fl{transform:scaleY(-1)}
+#seal{position:absolute;left:50%;top:52%;transform:translate(-50%,-50%);font-size:78px;line-height:1;color:#c24b68;filter:drop-shadow(0 3px 0 #8e2a40) drop-shadow(0 6px 8px rgba(0,0,0,.3));animation:beat 1.4s infinite;pointer-events:none}
+@keyframes beat{50%{transform:translate(-50%,-50%) scale(1.1)}}
+.env2.open #seal{opacity:0}
+#lettr{position:fixed;inset:0;z-index:10;background:rgba(60,10,30,.6);display:flex;padding:14px}
+.paper{margin:auto;width:min(620px,100%);max-height:92dvh;overflow:auto;background:#f1ecdc;border:2px solid #cdb9a5;border-radius:12px;padding:26px 22px;text-align:center;font:600 clamp(20px,5.2vw,26px)/1.5 'Dancing Script','Be Vietnam Pro',cursive;color:#8b0f2f;animation:pop .5s}
+.paper p{margin:0 0 .9em;opacity:0;animation:fade .8s forwards;animation-delay:calc(var(--d)*1s + .4s)}
+@keyframes fade{to{opacity:1}}
+.paper button{font:600 15px 'Be Vietnam Pro',sans-serif;background:var(--crim);color:#fff;border-radius:999px;padding:.6em 1.4em}
+/* cake */
+#cakeSvg{width:min(330px,82vw);height:auto;overflow:visible;margin-top:8px}
+.candle{cursor:pointer;outline:none}.hit{fill:transparent}
+.candle:focus-visible .hit{fill:rgba(164,22,46,.15)}
+.flame{opacity:0;transform:scale(0);transform-box:fill-box;transform-origin:50% 100%;transition:.3s;filter:drop-shadow(0 0 8px #ffb703)}
+.lit .flame{opacity:1;transform:scale(1);animation:flick .18s alternate infinite}
+.lit .wd{display:none}.wd{animation:blink 1.2s infinite}
+@keyframes flick{to{transform:scale(1.08,.94) rotate(2deg)}}
+@keyframes blink{50%{opacity:.2}}
+.btn{background:var(--crim);color:#fff;font-weight:600;border-radius:999px;padding:.75em 1.7em;margin:4px}
+.ghost{font-size:13px;text-decoration:underline;opacity:.8;padding:.5em}
+#wish input{width:min(420px,100%);font:16px 'Be Vietnam Pro',sans-serif;border:3px solid var(--dark);border-radius:12px;padding:.75em 1em;margin:8px 0;background:#fff}
+.back{position:fixed;top:12px;left:12px;z-index:20;font:700 16px 'Pixelify Sans',monospace;background:#fff;border:2px solid var(--dark);border-radius:10px;padding:.4em .9em}
+.snd{position:fixed;top:12px;right:12px;z-index:20;width:42px;height:42px;font-size:20px;background:#fff;border:2px solid var(--dark);border-radius:10px}
+#fx{position:fixed;inset:0;pointer-events:none;z-index:30}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.paper p{opacity:1}}
+</style>
+</head>
+<body class="plaid">
+<canvas id="fx"></canvas>
+<div class="deco" aria-hidden="true"><i style="left:5%;top:10%">✦</i><i style="left:88%;top:14%;animation-delay:.8s">♥</i><i style="left:8%;top:78%;animation-delay:1.4s">♥</i><i style="left:90%;top:80%;animation-delay:.4s">✦</i><i style="left:46%;top:4%;animation-delay:2s">★</i></div>
+<button class="back" id="back" hidden>‹ Back</button>
+<button class="snd" id="snd" aria-label="Bật/tắt nhạc" hidden>♪</button>
+<main>
+  <section class="scr" id="gate">
+    <h1>Enter Code</h1><p class="sub">Nhập mã</p>
+    <div class="boxes" id="boxes"></div>
+    <p id="err"></p>
+    <p class="hint">Hint: Your day.<span></span></p>
+    <div class="pad" id="pad"></div>
+  </section>
+
+  <section class="scr" id="gifts" hidden>
+    <h1>SURPRISE!</h1><p class="sub">click any gift<span></span></p>
+    <div class="gifts">
+      <button class="gift" data-g="flowers"><b>💐</b></button>
+      <button class="gift" data-g="mail"><b>💌</b></button>
+      <button class="gift" data-g="cake"><b>🎂</b></button>
+    </div>
+  </section>
+
+  <section class="scr" id="flowers" hidden>
+    <h1>flowers for you!</h1><p class="sub"></p>
+    <svg id="bq" viewBox="0 0 300 300" role="img" aria-label="Bó hoa hồng hồng"></svg>
+    <div class="tags" id="tags"></div>
+  </section>
+
+  <section class="scr" id="mail" hidden>
+    <h1>You've got a mail!</h1><p class="sub"></p>
+    <div class="env2" id="env2"><i class="bt"></i><i class="lf"></i><i class="rt"></i><i class="fl"></i><span id="seal">♥</span></div>
+    <p class="cap">Click the seal to open!<span></span></p>
+  </section>
+
+  <section class="scr" id="cake" hidden>
+    <h1>Cake for you!</h1><p class="sub"></p>
+    <svg id="cakeSvg" viewBox="0 0 300 290" role="img" aria-label="Bánh sinh nhật ba tầng với ba cây nến"></svg>
+    <p class="hint" id="ch">Light the candles<span></span></p>
+    <div id="blow" hidden><button class="btn" id="blowBtn">Blow your candles</button><div><button class="ghost" id="micBtn"></button></div></div>
+    <div id="wish" hidden>
+      <p class="hint">Make a wish ✨<span></span></p>
+      <input id="wishText" maxlength="120" placeholder="Ước gì đi nào" aria-label="Điều ước">
+      <div><button class="btn" id="sendBtn">Send wish</button></div>
+    </div>
+    <p class="hint" id="sent" hidden>Wish sent 💌<span></span></p>
+  </section>
+</main>
+<div id="lettr" hidden role="dialog" aria-modal="true" aria-label="Thư chúc mừng sinh nhật"><div class="paper" id="paper"></div></div>
+
+<script>
+/* ===== CHỈNH NỘI DUNG Ở ĐÂY / EDIT HERE ===== */
+const CFG = {
+  code: '1010',
+  from: 'Victor',
+  wishUrl: 'https://script.google.com/macros/s/AKfycbzj2d9G1ZQZFl8kvkY8btKHAonrt9DuHgAlvegaZGYa65Z_VXxmR11W9jV3pZg0-0Se/exec', // dán URL Google Apps Script vào đây để điều ước gửi riêng cho bạn
+  tags: ['HAPPY BIRTHDAY','SMILE MORE','MAKE A WISH'],
+  letter: {
+    title: 'Happy Birthday, Ngọc 💗',
+    lines: [
+      'Chúc em tuổi mới nhiều sức khỏe và hạnh phúc nhé.',
+      'Công việc thuận lợi, đạt được nhiều điều mình mong muốn',
+      'Luv ya!'
+    ],
+    sign: 'Huy Hoàng'
+  }
+};
+/* ============================================ */
+const $ = s => document.querySelector(s);
+const scr = [...document.querySelectorAll('.scr')];
+function show(id){
+  scr.forEach(s => s.hidden = s.id !== id);
+  $('#back').hidden = id === 'gate' || id === 'gifts';
+  $('#snd').hidden = id === 'gate';
+  document.body.classList.toggle('plaid', id === 'gate');
+  if (id !== 'cake') stopSong();
+  window.scrollTo(0, 0);
+}
+$('#back').onclick = () => show('gifts');
+
+/* ---- Gate ---- */
+let code = '';
+const boxes = $('#boxes');
+function renderBoxes(){
+  boxes.innerHTML = '';
+  for (let i = 0; i < 4; i++){ const b = document.createElement('b'); if (i < code.length) b.textContent = code[i]; else { b.textContent = '♥'; b.className = 'h'; } boxes.appendChild(b); }
+}
+function press(k){
+  if (k === 'DEL') code = code.slice(0, -1); else if (k === 'CLR') code = ''; else if (code.length < 4) code += k;
+  $('#err').textContent = ''; renderBoxes();
+  if (code.length === 4) setTimeout(check, 250);
+}
+function check(){
+  if (code === CFG.code){ show('gifts'); return; }
+  $('#err').textContent = 'Wrong code · Chưa đúng, thử lại nhé';
+  boxes.classList.remove('shake'); void boxes.offsetWidth; boxes.classList.add('shake');
+  code = ''; renderBoxes();
+}
+['1','2','3','4','5','6','7','8','9','CLR','0','DEL'].forEach(k => { const b = document.createElement('button'); b.textContent = k; b.onclick = () => press(k); $('#pad').appendChild(b); });
+addEventListener('keydown', e => {
+  if ($('#gate').hidden) { if (e.key === 'Escape') $('#lettr').hidden = true; return; }
+  if (/^\d$/.test(e.key)) press(e.key); else if (e.key === 'Backspace') press('DEL');
+});
+renderBoxes();
+
+/* ---- Gifts ---- */
+document.querySelectorAll('.gift').forEach(g => g.onclick = () => {
+  const id = g.dataset.g; g.classList.add('done'); initAudio(); show(id);
+  if (id === 'flowers') bloom(); if (id === 'cake') playSong();
+});
+
+/* ---- Flowers ---- */
+let bloomed = false;
+function bloom(){
+  if (bloomed) return; bloomed = true;
+  const pal = ['#f6a0bd','#f48fb1','#ffb6cd','#ee7fa5'];
+  let s = '';
+  [[72,205,-30],[228,205,30],[108,226,-12],[192,226,12]].forEach(([x,y,r]) => s += `<ellipse cx="${x}" cy="${y}" rx="34" ry="11" fill="#4d8a52" transform="rotate(${r} ${x} ${y})"/>`);
+  for (let i = -3; i <= 3; i++) s += `<line x1="${150+i*6}" y1="200" x2="${150+i}" y2="294" stroke="#3f7a47" stroke-width="5" stroke-linecap="round"/>`;
+  s += '<rect x="130" y="244" width="40" height="11" rx="4" fill="#c9a66b"/><ellipse cx="136" cy="256" rx="15" ry="8" fill="#c2185b" transform="rotate(25 136 256)"/><ellipse cx="164" cy="256" rx="15" ry="8" fill="#c2185b" transform="rotate(-25 164 256)"/><circle cx="150" cy="252" r="6" fill="#a4162e"/>';
+  const R = [[0,0,1],[40,0,6],[72,.3,11]], pts = [];
+  R.forEach(([r,o,n]) => { for (let k = 0; k < n; k++){ const a = o + k * 6.283 / n; pts.push([150 + r * Math.cos(a), 112 + r * .85 * Math.sin(a)]); } });
+  pts.sort((a,b) => a[1] - b[1]).forEach(([x,y],i) => s += `<g transform="translate(${x.toFixed(0)} ${y.toFixed(0)})"><g class="rose" style="--i:${i}"><circle r="24" fill="${pal[i%4]}"/><circle r="15" fill="${pal[(i+1)%4]}"/><path d="M-6 0a6 6 0 1 1 6 6" fill="none" stroke="#c2456f" stroke-width="2"/></g></g>`);
+  $('#bq').innerHTML = s;
+  $('#tags').innerHTML = CFG.tags.map((t,i) => `<b style="--i:${i}">${t}</b>`).join('');
+}
+
+/* ---- Mail ---- */
+function openLetter(){
+  const p = $('#paper'); p.textContent = '';
+  const add = (tag, text, i) => { const e = document.createElement(tag); e.textContent = text; e.style.setProperty('--d', i); p.appendChild(e); return e; };
+  add('p', CFG.letter.title, 0); let i = 1;
+  CFG.letter.lines.forEach(t => add('p', t, i++));
+  add('p', CFG.letter.sign, i++);
+  const b = document.createElement('button'); b.textContent = 'Close · Đóng'; b.onclick = () => { $('#lettr').hidden = true; }; p.appendChild(b);
+  $('#lettr').hidden = false; b.focus();
+}
+$('#env2').onclick = () => {
+  const e = $('#env2');
+  if (e.classList.contains('open')) openLetter(); else { e.classList.add('open'); setTimeout(openLetter, 750); }
+};
+
+/* ---- Cake ---- */
+function tier(x,y,w,h){
+  let s = `<rect x="${x}" y="${y}" width="${w}" height="${h}" rx="6" fill="#d9a066"/><rect x="${x}" y="${y+h*.34}" width="${w}" height="${h*.34}" fill="#f7a8cc"/><rect x="${x}" y="${y+h*.26}" width="${w}" height="${h*.09}" fill="#fff"/><rect x="${x}" y="${y}" width="${w}" height="12" fill="#5a2a1d"/>`;
+  const n = Math.round(w / 22), L = [16,32,20,36,18,28,22,34];
+  for (let i = 0; i < n; i++) s += `<rect x="${(x+10+i*(w-20)/(n-1)-5).toFixed(0)}" y="${y}" width="10" height="${L[i%8]}" rx="5" fill="#5a2a1d"/>`;
+  return s + `<ellipse cx="${x+w/2}" cy="${y}" rx="${w/2}" ry="9" fill="#4a2218"/>`;
+}
+const berry = (x,y) => `<g transform="translate(${x} ${y})"><path d="M0-9C9-9 11 2 0 11C-11 2-9-9 0-9Z" fill="#e8344f"/><path d="M-6-9l6 3 6-3-3 4h-6z" fill="#3f9a4d"/><circle cx="-3" cy="0" r="1" fill="#ffd9a0"/><circle cx="3" cy="3" r="1" fill="#ffd9a0"/></g>`;
+const candle = (cx,n) => `<g class="candle" tabindex="0" role="button" aria-label="Thắp nến ${n}"><rect class="hit" x="${cx-13}" y="0" width="26" height="94" rx="8"/><rect x="${cx-3}" y="56" width="6" height="34" rx="1.5" fill="#fff"/><rect x="${cx-3}" y="64" width="6" height="4" fill="#f48fb1"/><rect x="${cx-3}" y="74" width="6" height="4" fill="#f48fb1"/><circle class="wd" cx="${cx}" cy="52" r="2.5" fill="#ffb703"/><g transform="translate(${cx} 50)"><path class="flame" d="M0-20C9-8 7 3 0 6C-7 3-9-8 0-20Z" fill="#ffb703"/></g></g>`;
+$('#cakeSvg').innerHTML = '<ellipse cx="150" cy="272" rx="142" ry="11" fill="#fff7f9" stroke="#e9a2b9" stroke-width="2"/>'
+  + tier(26,200,248,68) + tier(54,142,192,62) + tier(82,90,136,56)
+  + [[100,130],[200,130],[78,190],[222,190],[150,186],[66,252],[234,252],[150,250]].map(([x,y]) => berry(x,y)).join('')
+  + candle(108,1) + candle(150,2) + candle(192,3);
+const candles = [...document.querySelectorAll('.candle')];
+let lit = 0, blown = false;
+function light(c){
+  if (blown || c.classList.contains('lit')) return;
+  c.classList.add('lit'); lit++;
+  if (lit < 3) $('#ch').innerHTML = `${3 - lit} more to light<span></span>`;
+  else { $('#ch').innerHTML = 'Now blow them out!<span></span>'; $('#blow').hidden = false; }
+}
+candles.forEach(c => { c.onclick = () => light(c); c.onkeydown = e => { if (e.key === 'Enter' || e.key === ' '){ e.preventDefault(); light(c); } }; });
+function blow(){
+  if (blown) return; blown = true;
+  candles.forEach(c => c.classList.remove('lit'));
+  $('#blow').hidden = true; $('#wish').hidden = false;
+  $('#ch').innerHTML = 'Happy Birthday! 🎉<span></span>';
+  confetti(); $('#wishText').focus({preventScroll:true});
+}
+$('#blowBtn').onclick = blow;
+$('#micBtn').onclick = async () => {
+  try {
+    initAudio();
+    const s = await navigator.mediaDevices.getUserMedia({audio:true});
+    const ac = new (window.AudioContext || window.webkitAudioContext)(), an = ac.createAnalyser(), d = new Uint8Array(512);
+    an.fftSize = 512; ac.createMediaStreamSource(s).connect(an);
+    $('#micBtn').textContent = 'Đang nghe… hãy thổi mạnh vào micro';
+    (function loop(){
+      if (blown){ s.getTracks().forEach(t => t.stop()); ac.close(); return; }
+      an.getByteTimeDomainData(d);
+      let m = 0; for (const v of d) m = Math.max(m, Math.abs(v - 128));
+      if (m > 90) blow();
+      requestAnimationFrame(loop);
+    })();
+  } catch { $('#micBtn').textContent = 'Không dùng được micro, hãy bấm nút Thổi nến'; }
+};
+function sendWish(){
+  const w = $('#wishText').value.trim(); if (!w) { $('#wishText').focus(); return; }
+  if (CFG.wishUrl) { try { fetch(CFG.wishUrl, {method:'POST', mode:'no-cors', keepalive:true, headers:{'Content-Type':'text/plain'}, body:JSON.stringify({wish:w})}).catch(()=>{}); } catch(e){} }
+  $('#wish').hidden = true; $('#sent').hidden = false; confetti();
+}
+$('#sendBtn').onclick = sendWish;
+$('#wishText').addEventListener('keydown', e => { if (e.key === 'Enter') sendWish(); });
+
+/* ---- Music (Happy Birthday, tổng hợp bằng Web Audio) ---- */
+let AC, master, songG, muted = false;
+function initAudio(){
+  if (!AC){ AC = new (window.AudioContext || window.webkitAudioContext)(); master = AC.createGain(); master.gain.value = muted ? 0 : 1; master.connect(AC.destination); }
+  if (AC.state === 'suspended') AC.resume();
+}
+$('#snd').onclick = () => { muted = !muted; $('#snd').textContent = muted ? '🔇' : '♪'; if (master) master.gain.value = muted ? 0 : 1; };
+function stopSong(){ if (songG){ songG.disconnect(); songG = null; } }
+function playSong(){
+  initAudio(); stopSong(); songG = AC.createGain(); songG.connect(master);
+  const ph = (a,last) => a.map((n,i) => [n, [.75,.25,1,1,1,last][i]]);
+  const seq = [...ph([67,67,69,67,72,71],2), ...ph([67,67,69,67,74,72],2), [67,.75],[67,.25],[79,1],[76,1],[72,1],[71,1],[69,2], ...ph([77,77,76,72,74,72],3)];
+  let t = AC.currentTime + .3; const beat = .55;
+  seq.forEach(([m,b]) => {
+    const f = 440 * 2 ** ((m - 69) / 12), d = b * beat;
+    [[1,.16],[2,.05]].forEach(([k,v]) => {
+      const o = AC.createOscillator(), g = AC.createGain();
+      o.type = 'sine'; o.frequency.value = f * k;
+      g.gain.setValueAtTime(0, t); g.gain.linearRampToValueAtTime(v, t + .012);
+      g.gain.exponentialRampToValueAtTime(.0008, t + d * 1.3);
+      o.connect(g); g.connect(songG); o.start(t); o.stop(t + d * 1.4);
+    });
+    t += d;
+  });
+}
+
+function confetti(){
+  if (matchMedia('(prefers-reduced-motion:reduce)').matches) return;
+  const c = $('#fx'), x = c.getContext('2d'); c.width = innerWidth; c.height = innerHeight;
+  const cols = ['#f6a0bd','#ffb703','#a4162e','#fff','#ffd1e0'];
+  const P = Array.from({length:150}, () => ({x:Math.random()*c.width, y:-20-Math.random()*c.height*.6, w:6+Math.random()*6, h:10+Math.random()*8, vy:2+Math.random()*3, vx:-1+Math.random()*2, r:Math.random()*6, vr:-.2+Math.random()*.4, c:cols[Math.random()*5|0]}));
+  let t = 0;
+  (function f(){
+    x.clearRect(0,0,c.width,c.height);
+    P.forEach(q => { q.x+=q.vx; q.y+=q.vy; q.r+=q.vr; x.save(); x.translate(q.x,q.y); x.rotate(q.r); x.fillStyle=q.c; x.fillRect(-q.w/2,-q.h/2,q.w,q.h); x.restore(); });
+    if (++t < 420) requestAnimationFrame(f); else x.clearRect(0,0,c.width,c.height);
+  })();
+}
+</script>
+</body>
+</html>
